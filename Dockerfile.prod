@@ -1,0 +1,11 @@
+FROM node:20.11-alpine
+
+WORKDIR /app
+
+COPY ./node-app/package.json .
+
+RUN npm install
+
+COPY ./node-app .
+
+EXPOSE $PORT

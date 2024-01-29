@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  node-app:
+    build:
+      context: .
+    container_name: node-app
+    ports:
+      - ${APP_PORT_OUT}:${APP_PORT}
